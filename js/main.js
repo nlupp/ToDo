@@ -9,8 +9,8 @@ function inserirNota() {
     var nota = $("<textarea>")
     $(nota).attr({
         id: "tArea", class: "caixaDtexto",
-        rows: "2", cols: "50", maxlength: "100",
-        
+        rows: "2", cols: "50", maxlength: "50",
+        readonly:"readonly"
     });
     $(nota).html(textoNota);
 
