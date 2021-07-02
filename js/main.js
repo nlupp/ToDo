@@ -5,29 +5,35 @@ $(document).ready(function () {
 function inserirNota() {
     var textoNota = $("#escreverNota").val();
 
-    var div = $("<div>");
+    var div = $("<div>").addClass("");
     var nota = $("<textarea>")
     $(nota).html(textoNota);
+    
     $(nota).appendTo(div);
-   
-    var remover = $("<button>");
+
+    var editar = $("<button>").addClass("edicao");
+    $(editar).html('editar');
+    $(editar).on("click", function () {
+        
+    });
+    $(editar).appendTo(div);
+
+    var remover = $("<button>").addClass("remocao");
     $(remover).html('Remover');
-    $(remover).on("click",function(){
+    $(remover).on("click", function () {
         div.remove();
     });
     $(remover).appendTo(div);
 
-    /
-    var editar =  $("<button>");
-    $(editar).html('editar');
-    $(editar).on("click",function(){
-       
-    });
-
+    
     $(div).appendTo('.container');
-    // dentro da div 
 }
 
+/*
+if ($(nota).prop("disabled", false)) {
+} else {
+    $(nota).prop("disabled", true)
+}
 
 /*
 function remover(){
